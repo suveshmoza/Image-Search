@@ -4,9 +4,11 @@ const ImageCard = ({ image }) => {
 	const tags = image.tags.split(",");
 
 	return (
-		<div>
+		<div >
 			<div className="max-w-sm rounded overflow-hidden shadow-2xl ml-3">
-				<img src={image.webformatURL} alt="" className="w-full" />
+				<a target="_blank" rel="noopener noreferrer" download="image" href={image.largeImageURL}  >
+					<img  src={image.webformatURL} alt=""/>
+				</a>
 				<div className="px=6 py-4">
 					<div className="font-bold text-black-500 text-xl mb-2 px-2">
 						Photo by {image.user}

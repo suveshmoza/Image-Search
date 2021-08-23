@@ -6,7 +6,7 @@ import ImageSearch from "./components/ImageSearch";
 function App() {
 	const [images, setImages] = useState([]);
 	const [isLoading, setIsLoading] = useState(true);
-	const [term, setTerm] = useState("");
+	const [term, setTerm] = useState("nature");
 
 	useEffect(() => {
 		const fetchImages = async () => {
@@ -32,9 +32,9 @@ function App() {
 			{isLoading ? (
 				<h1 className="text-6xl text-center mx-auto mt-32">Search</h1>
 			) : (
-				<div className="grid grid-cols-1 md:grid-cols-3 gap-4 ">
+				<div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-stretch ">
 					{images.map((image) => (
-						<ImageCard key={image.id} image={image} />
+						<ImageCard  key={image.id}  image={image} />
 					))}
 				</div>
 			)}
